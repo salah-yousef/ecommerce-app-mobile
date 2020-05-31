@@ -1,5 +1,7 @@
 {
   "name": "ahlAlmadinah",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
