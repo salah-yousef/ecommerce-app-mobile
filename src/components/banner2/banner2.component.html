@@ -1,0 +1,23 @@
+<div class="banner-component">
+
+  <div *ngIf="shared.banners.length==0">
+    <ion-skeleton-text animated style="height: 211px;">
+    </ion-skeleton-text>
+  </div>
+  <div>
+    <ion-slides pager="false" [options]="slideOpts">
+      <ion-slide  class="ion-no-padding ion-no-margin animate-item">
+        <p class="ion-no-margin">عالم الالكترونيات بين يديك</p>
+      </ion-slide>
+      <ion-slide  class="ion-no-padding ion-no-margin animate-item">
+        <p class="ion-no-margin">البس كمامة | اترك مسافة | اغسل و عقم ايدك</p>
+      </ion-slide>
+      <ion-slide  class="ion-no-padding ion-no-margin animate-item">
+        <p class="ion-no-margin">خلّك مع سريع و احصل علي افضل العروض</p>
+      </ion-slide>
+      <ion-slide  class="ion-no-padding  animate-item">
+        <p class="ion-no-margin">سريع: نصلك اينما كنت</p>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</div>

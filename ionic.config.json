@@ -1,7 +1,8 @@
 {
-  "name": "ahlAlmadinah",
+  "name": "ionicWoocommerce",
   "integrations": {
     "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "id": "12b19593"
 }

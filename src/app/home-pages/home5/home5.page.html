@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start">
+      <ion-icon name="menu"></ion-icon>
+    </ion-menu-button>
+    <ion-title>
+      <ion-img src="assets/logo_header.png" alt="logo"></ion-img>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" routerLink="/cart" routerDirection="forward">
+        <ion-icon name="basket"></ion-icon>
+        <ion-badge color="secondary">{{shared.cartTotalItems()}}</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-button fill="solid" routerLink="/search" routerDirection="forward" style="margin:0px;--background: white; --color: white;padding: 0px 15px; width:100%">
+      <ion-icon name="search-outline" style="color: #949090;"></ion-icon>
+      <input #searchInput aria-label="search text"
+      onfocus="this.placeholder = 'ما الذي تبحث عنه'"
+      onblur="this.placeholder = 'ما الذي تبحث عنه'"
+      class="searchbar-input sc-ion-searchbar-md" placeholder="ما الذي تبحث عنه" 
+      type="search" autocomplete="off" autocorrect="off">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-banner2 *ngIf="shared.filteredCategories.length > 6"></app-banner2>
+  <app-banner></app-banner>
+  <ion-list>
+    <ion-card *ngFor="let c of shared.filteredCategories" (click)="openSubCategories(c)" class="animate__animated animate__backInLeft animate__delay-1s">
+      <img *ngIf="c.image" src="{{c.image.src}}">
+    </ion-card>
+    <!-- <ion-card *ngIf="shared.filteredCategories.length > 6" (click)="openSubSimCardPages()" class="animate__animated animate__backInLeft animate__delay-1s">
+      <img *ngIf="simCardImage" src="{{simCardImage}}">
+    </ion-card> -->
+  </ion-list>
+</ion-content>

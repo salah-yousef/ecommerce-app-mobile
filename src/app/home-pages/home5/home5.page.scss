@@ -1,0 +1,46 @@
+ion-badge {
+    font-size: 0.5rem;
+}
+ion-list {
+    padding-top: 0;
+    ion-card {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        img {
+            filter: brightness(1);
+            width: 100%;
+        }
+        div {
+            position: absolute;
+            top: 32%;
+            text-align: center;
+            width: 100%;
+            color: white;
+            font-weight: bold;
+            height: 250px;
+            h2 {
+                margin-top: 25px;
+                margin-bottom: 5px;
+                font-size: var(--heading-font-size);
+                font-weight: bold;
+            }
+            p {
+                font-size: var(--sub-heading-font-size);
+                margin-top: 0;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 601px) {
+    .searchbar-input{
+        border: none;
+        padding-left: 73%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .searchbar-input{
+        border: none;
+        padding-left: 38%;
+    }
+  }
